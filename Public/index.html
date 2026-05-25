@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Turtle Graphics - Mathematical Art</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="info">
+        <h1>🐢 3D Turtle Graphics | Mathematical Expressions</h1>
+        <p>Parametric Curves | Spiral | Rose | Helix | Three.js</p>
+    </div>
+    
+    <div id="controls">
+        <button id="btn-spiral" class="btn-primary">🌀 3D Spiral</button>
+        <button id="btn-cube" class="btn-primary">📦 Wireframe Cube</button>
+        <button id="btn-parametric" class="btn-primary">📈 Toroidal Spiral</button>
+        <button id="btn-rose" class="btn-primary">🌹 3D Rose Curve</button>
+        <button id="btn-helix" class="btn-primary">🧬 Double Helix</button>
+        <button id="btn-flower" class="btn-primary">🌸 3D Flower</button>
+        <button id="btn-clear" class="btn-danger">🗑️ Clear All</button>
+        
+        <div class="status-panel">
+            <div class="status-item">
+                <span class="status-label">📍 Position:</span>
+                <span id="pos-display" class="coord">(0.00, 0.00, 0.00)</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">✏️ Pen:</span>
+                <span id="pen-status" class="pen-down">DOWN</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="instruction">
+        🖱️ Mouse Drag: Rotate Camera | Scroll: Zoom | Right Click: Pan
+    </div>
+    
+    <div id="fps-counter">
+        <span id="fps">60</span> FPS
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="/js/turtle3d.js"></script>
+</body>
+</html>
